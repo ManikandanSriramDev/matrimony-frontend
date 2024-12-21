@@ -26,11 +26,20 @@ import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
+import HomePage from "layouts/homepage";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
 
 const routes = [
+  {
+    type: "collapse",
+    name: "Home",
+    key: "home",
+    icon: <Icon fontSize="small">home</Icon>,
+    route: "/",
+    component: <HomePage />,
+  },
   {
     type: "collapse",
     name: "Dashboard",
