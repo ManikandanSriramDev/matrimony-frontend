@@ -14,14 +14,16 @@ import Sidenav from "examples/Sidenav";
 import Configurator from "examples/Configurator";
 import theme from "assets/theme";
 import themeDark from "assets/theme-dark";
-import { CacheProvider } from "@emotion/react";
-import createCache from "@emotion/cache";
+//import { CacheProvider } from "@emotion/react";
+//import createCache from "@emotion/cache";
 import routes from "routes";
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
+
+import Presentation from "layouts/pages/presentation";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -128,7 +130,8 @@ export default function App() {
       )}
       <Routes>
         {getRoutes(routes)}
-        {/* <Route path="*" element={<Navigate to="/" />} /> */}
+        <Route path="/presentation" element={<Presentation />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       {layout === "vr" && <Configurator />}
     </ThemeProvider>
