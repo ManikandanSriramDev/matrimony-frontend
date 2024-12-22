@@ -8,8 +8,7 @@ import MKBox from "components/MDBox";
 import MKTypography from "components/MDTypography";
 
 function BuiltByDevelopers() {
-  const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
+  const bgImage = "";
 
   return (
     <MKBox
@@ -43,7 +42,7 @@ function BuiltByDevelopers() {
           </MKTypography>
           <MKTypography
             component="a"
-            href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
+            href=""
             target="_blank"
             rel="noreferrer"
             variant="body2"

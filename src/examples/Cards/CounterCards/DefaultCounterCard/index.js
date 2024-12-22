@@ -26,9 +26,7 @@ function DefaultCounterCard({ color, count, title, description, ...rest }) {
       )}
     </MKBox>
   );
-}
-
-// Setting default props for the DefaultCounterCard
+} // Setting default props for the DefaultCounterCard
 DefaultCounterCard.defaultProps = {
   color: "info",
   description: "",

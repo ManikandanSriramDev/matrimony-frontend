@@ -1,5 +1,4 @@
-const imagesPrefix =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages";
+const imagesPrefix = "";
 
 export default [
   {
@@ -13,8 +12,7 @@ export default [
     route: "/pages/landing-pages/contact-us",
   },
   {
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/account/signin-basic.jpg",
+    image: "",
     name: "Sign In Page",
     route: "/pages/authentication/sign-in",
   },

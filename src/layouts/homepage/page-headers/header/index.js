@@ -1,5 +1,4 @@
-/* eslint-disable no-template-curly-in-string */
-
+// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -11,27 +10,12 @@ import MKButton from "components/MDButton";
 import MKTypography from "components/MDTypography";
 
 // Images
-import bgImageUrl from "assets/images/bg-coworking.jpeg";
+import bgImage from "assets/images/bg-coworking.jpeg";
 
-// Define rgba function
-const rgba = (color, alpha) => {
-  const [r, g, b] = color.match(/\d+/g); // Assumes color is in rgb format
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-};
-
-// Define linearGradient function
-const linearGradient = (start, end) => {
-  return `linear-gradient(${start}, ${end})`;
-};
-
-const bgImage = `${linearGradient(
-  rgba("rgb(0, 0, 0)", 0.5),
-  rgba("rgb(255, 255, 255)", 0.5)
-)}, url(${bgImageUrl})`;
-
-function HeaderOne() {
+const companyNames = ["Company Name avnavnasnvasn;"];
+function Header() {
   return (
-    <MKBox component="header" position="relative">
+    <MKBox component="header" position="relative" height="100%">
       <MKBox component="nav" position="absolute" top="0.5rem" width="100%">
         <Container>
           <Grid container flexDirection="row" alignItems="center">
@@ -44,7 +28,7 @@ function HeaderOne() {
               py={0.8125}
               mr={2}
             >
-              Material Design
+              {companyNames}
             </MKTypography>
             <MKButton
               variant="outlined"
@@ -148,15 +132,16 @@ function HeaderOne() {
       <MKBox
         display="flex"
         alignItems="center"
-        minHeight="100vh"
-        sx={({ palette: { gradients }, functions: { linearGradient, rgba } }) => ({
-          backgroundImage: `${linearGradient(
-            rgba(gradients.dark.main, 0.5),
-            rgba(gradients.dark.state, 0.5)
-          )}, url(${bgImage})`,
+        minHeight="100%"
+        sx={{
+          backgroundImage: ({ palette: { gradients }, functions: { linearGradient, rgba } }) =>
+            `${linearGradient(
+              rgba(gradients.dark.main, 0.5),
+              rgba(gradients.dark.state, 0.5)
+            )}, url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        })}
+        }}
       >
         <Container>
           <Grid container item xs={12} md={7} lg={6} flexDirection="column" justifyContent="center">
@@ -189,4 +174,4 @@ function HeaderOne() {
   );
 }
 
-export default HeaderOne;
+export default Header;

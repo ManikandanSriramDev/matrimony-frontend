@@ -1,43 +1,14 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-import { useState, useEffect } from "react";
-
-// react-router components
-import { Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
-
-// @mui material components
+import { useState, useEffect } from "react"; // react-router components
+import { Link } from "react-router-dom"; // prop-types is a library for typechecking of props.
+import PropTypes from "prop-types"; // @mui material components
 import Container from "@mui/material/Container";
-import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+import Icon from "@mui/material/Icon"; //  React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
-
-// Material Dashboard 2 React example components
+import MDButton from "components/MDButton"; //  React example components
 import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
-import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
-
-// Material Dashboard 2 React base styles
-import breakpoints from "assets/theme/base/breakpoints";
-
-// Material Dashboard 2 React context
+import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile"; //  React base styles
+import breakpoints from "assets/theme/base/breakpoints"; //  React context
 import { useMaterialUIController } from "context";
 
 function DefaultNavbar({ transparent, light, action }) {
@@ -109,9 +80,11 @@ function DefaultNavbar({ transparent, light, action }) {
           lineHeight={1}
           pl={{ xs: 0, lg: 1 }}
         >
-          <MDTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-            Material Dashboard 2
-          </MDTypography>
+          <MDTypography
+            variant="button"
+            fontWeight="bold"
+            color={light ? "white" : "dark"}
+          ></MDTypography>
         </MDBox>
         <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
           <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" light={light} />
@@ -173,16 +146,12 @@ function DefaultNavbar({ transparent, light, action }) {
       {mobileView && <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar} />}
     </Container>
   );
-}
-
-// Setting default values for the props of DefaultNavbar
+} // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
   transparent: false,
   light: false,
   action: false,
-};
-
-// Typechecking props for the DefaultNavbar
+}; // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
   transparent: PropTypes.bool,
   light: PropTypes.bool,

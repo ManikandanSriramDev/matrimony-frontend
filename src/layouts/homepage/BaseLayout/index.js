@@ -5,49 +5,45 @@ import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
-// Material Kit 2 React components
-import MKBox from "components/MDBox";
-import MKTypography from "components/MDTypography";
+// Material Kit
+import MDBox from "components/MDBox";
+import MDTypography from "components/MDTypography";
 
-// Material Kit 2 React examples
+// Material Kit
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import CenteredFooter from "examples/Footers/CenteredFooter";
 import Breadcrumbs from "examples/Breadcrumbs";
 
+import TestLogo from "assets/images/team-2.jpg";
+
 // Routes
 import routes from "routes";
+import { Hidden } from "@mui/material";
 
 function BaseLayout({ breadcrumb, title, children }) {
   return (
-    <MKBox display="flex" flexDirection="column" bgColor="white" minHeight="100vh">
-      <MKBox bgColor="white" shadow="sm" py={0.25}>
-        <DefaultNavbar
-          routes={routes}
-          action={{
-            type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-react",
-            label: "free download",
-            color: "info",
-          }}
-          transparent
-          relative
-        />
-      </MKBox>
+    <MDBox display="flex" flexDirection="column" bgColor="white" minHeight="100vh">
+      <MDBox bgColor="white" shadow="sm" py={0.25}>
+        <DefaultNavbar routes={routes} transparent relative />
+      </MDBox>
       <Container sx={{ mt: 6 }}>
         <Grid container item xs={12} flexDirection="column" justifyContent="center" mx="auto">
-          <MKBox width={{ xs: "100%", md: "50%", lg: "25%" }} mb={3}>
-            <Breadcrumbs routes={breadcrumb} />
-          </MKBox>
-          <MKTypography variant="h3" mb={1}>
+          <MDBox width={{ xs: "100%", md: "50%", lg: "25%" }} mb={3}>
+            {/* <Breadcrumbs routes={breadcrumb} /> */}
+            <Hidden>
+              <Breadcrumbs icon={TestLogo} title="Page Headers" route={breadcrumb} light={false} />
+            </Hidden>
+          </MDBox>
+          <MDTypography variant="h3" mb={1}>
             {title}
-          </MKTypography>
+          </MDTypography>
           {children}
         </Grid>
       </Container>
-      <MKBox mt="auto">
+      <MDBox mt="auto">
         <CenteredFooter />
-      </MKBox>
-    </MKBox>
+      </MDBox>
+    </MDBox>
   );
 }
 

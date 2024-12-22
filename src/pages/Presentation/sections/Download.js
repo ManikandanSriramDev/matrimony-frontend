@@ -41,16 +41,14 @@ function Download() {
               UI Kit for ReactJS &amp; MUI?
             </MKTypography>
             <MKTypography variant="body2" color="white" mb={6}>
-              Cause if you do, it can be yours for FREE. Hit the button below to navigate to
-              Creative Tim where you can find the Design System in HTML. Start a new project or give
-              an old Bootstrap project a new look!
+              Some testing Code for the above snippet
             </MKTypography>
             <MKButton
               variant="gradient"
               color="info"
               size="large"
               component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
+              href=""
               sx={{ mb: 2 }}
             >
               Download Now
@@ -67,16 +65,8 @@ function Download() {
             <Grid container spacing={3} justifyContent="center">
               <Grid item xs={4} lg={2}>
                 <Tooltip title="Bootstrap 5 - Most popular front-end component library">
-                  <MKBox
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-kit"
-                    target="_blank"
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/bootstrap5.jpg"
-                      width="100%"
-                    />
+                  <MKBox component="a" href="" target="_blank">
+                    <MKBox component="img" src="" width="100%" />
                   </MKBox>
                 </Tooltip>
               </Grid>
@@ -89,11 +79,7 @@ function Download() {
                     target="_blank"
                     onClick={(e) => e.preventDefault()}
                   >
-                    <MKBox
-                      component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/icon-tailwind.jpg"
-                      width="100%"
-                    />
+                    <MKBox component="img" src="" width="100%" />
                   </MKBox>
                 </Tooltip>
               </Grid>
@@ -106,11 +92,7 @@ function Download() {
                     target="_blank"
                     onClick={(e) => e.preventDefault()}
                   >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
-                      width="100%"
-                    />
+                    <MKBox component="img" src="" width="100%" />
                   </MKBox>
                 </Tooltip>
               </Grid>
@@ -123,26 +105,14 @@ function Download() {
                     target="_blank"
                     onClick={(e) => e.preventDefault()}
                   >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
-                      width="100%"
-                    />
+                    <MKBox component="img" src="" width="100%" />
                   </MKBox>
                 </Tooltip>
               </Grid>
               <Grid item xs={4} lg={2}>
                 <Tooltip title="Comming soon">
-                  <MKBox
-                    component="a"
-                    href="https://www.creative-tim.com/product/material-kit-react"
-                    target="_blank"
-                  >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
-                      width="100%"
-                    />
+                  <MKBox component="a" href="" target="_blank">
+                    <MKBox component="img" src="" width="100%" />
                   </MKBox>
                 </Tooltip>
               </Grid>
@@ -155,11 +125,7 @@ function Download() {
                     target="_blank"
                     onClick={(e) => e.preventDefault()}
                   >
-                    <MKBox
-                      component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
-                      width="100%"
-                    />
+                    <MKBox component="img" src="" width="100%" />
                   </MKBox>
                 </Tooltip>
               </Grid>

@@ -1,40 +1,15 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-import { useState, useEffect } from "react";
-
-// prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
-
-// @mui material components
+import { useState, useEffect } from "react"; // prop-types is a library for typechecking of props.
+import PropTypes from "prop-types"; // @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+import Icon from "@mui/material/Icon"; //  React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
-
-// Material Dashboard 2 React base styles
-import breakpoints from "assets/theme/base/breakpoints";
-
-// Images
+import MDAvatar from "components/MDAvatar"; //  React base styles
+import breakpoints from "assets/theme/base/breakpoints"; // Images
 import burceMars from "assets/images/bruce-mars.jpg";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 
@@ -141,14 +116,10 @@ function Header({ children }) {
       </Card>
     </MDBox>
   );
-}
-
-// Setting default props for the Header
+} // Setting default props for the Header
 Header.defaultProps = {
   children: "",
-};
-
-// Typechecking props for the Header
+}; // Typechecking props for the Header
 Header.propTypes = {
   children: PropTypes.node,
 };

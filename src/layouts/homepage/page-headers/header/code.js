@@ -1,24 +1,41 @@
-// @mui material components
+/* eslint-disable no-template-curly-in-string */
+
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 
 // Material Kit 2 React components
-import MKBox from "components/MDBox";
-import MKButton from "components/MDButton";
-import MKTypography from "components/MDTypography";
+import MDBox from "components/MDBox";
+import MDButton from "components/MDButton";
+import MDTypography from "components/MDTypography";
 
 // Images
-import bgImage from "assets/images/bg-coworking.jpeg";
+import bgImageUrl from "assets/images/bg-coworking.jpeg";
 
-function HeaderOne() {
+// Define rgba function
+const rgba = (color, alpha) => {
+  const [r, g, b] = color.match(/\d+/g); // Assumes color is in rgb format
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+// Define linearGradient function
+const linearGradient = (start, end) => {
+  return `linear-gradient(${start}, ${end})`;
+};
+
+const bgImage = `${linearGradient(
+  rgba("rgb(0, 0, 0)", 0.5),
+  rgba("rgb(255, 255, 255)", 0.5)
+)}, url(${bgImageUrl})`;
+
+function HeaderCode() {
   return (
-    <MKBox component="header" position="relative" height="100%">
-      <MKBox component="nav" position="absolute" top="0.5rem" width="100%">
+    <MDBox component="header" position="relative">
+      <MDBox component="nav" position="absolute" top="0.5rem" width="100%">
         <Container>
           <Grid container flexDirection="row" alignItems="center">
-            <MKTypography
+            <MDTypography
               component={Link}
               href="#"
               variant="button"
@@ -28,15 +45,15 @@ function HeaderOne() {
               mr={2}
             >
               Material Design
-            </MKTypography>
-            <MKButton
+            </MDTypography>
+            <MDButton
               variant="outlined"
               color="white"
               sx={{ display: { xs: "block", lg: "none" }, ml: "auto" }}
             >
-              <MKBox component="i" color="white" className="fas fa-bars" />
-            </MKButton>
-            <MKBox
+              <MDBox component="i" color="white" className="fas fa-bars" />
+            </MDButton>
+            <MDBox
               component="ul"
               display={{ xs: "none", lg: "flex" }}
               p={0}
@@ -44,8 +61,8 @@ function HeaderOne() {
               mx="auto"
               sx={{ listStyle: "none" }}
             >
-              <MKBox component="li">
-                <MKTypography
+              <MDBox component="li">
+                <MDTypography
                   component={Link}
                   href="#"
                   variant="button"
@@ -55,10 +72,10 @@ function HeaderOne() {
                   onClick={(e) => e.preventDefault()}
                 >
                   Home
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
+                </MDTypography>
+              </MDBox>
+              <MDBox component="li">
+                <MDTypography
                   component={Link}
                   href="#"
                   variant="button"
@@ -68,10 +85,10 @@ function HeaderOne() {
                   onClick={(e) => e.preventDefault()}
                 >
                   About Us
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
+                </MDTypography>
+              </MDBox>
+              <MDBox component="li">
+                <MDTypography
                   component={Link}
                   href="#"
                   variant="button"
@@ -81,70 +98,69 @@ function HeaderOne() {
                   onClick={(e) => e.preventDefault()}
                 >
                   Contact Us
-                </MKTypography>
-              </MKBox>
-            </MKBox>
-            <MKBox
+                </MDTypography>
+              </MDBox>
+            </MDBox>
+            <MDBox
               component="ul"
               display={{ xs: "none", lg: "flex" }}
               p={0}
               m={0}
               sx={{ listStyle: "none" }}
             >
-              <MKBox component="li">
-                <MKTypography
+              <MDBox component="li">
+                <MDTypography
                   component={Link}
                   href="#"
                   variant="button"
                   p={1}
                   onClick={(e) => e.preventDefault()}
                 >
-                  <MKBox component="i" color="white" className="fab fa-twitter" />
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
+                  <MDBox component="i" color="white" className="fab fa-twitter" />
+                </MDTypography>
+              </MDBox>
+              <MDBox component="li">
+                <MDTypography
                   component={Link}
                   href="#"
                   variant="button"
                   p={1}
                   onClick={(e) => e.preventDefault()}
                 >
-                  <MKBox component="i" color="white" className="fab fa-facebook" />
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
+                  <MDBox component="i" color="white" className="fab fa-facebook" />
+                </MDTypography>
+              </MDBox>
+              <MDBox component="li">
+                <MDTypography
                   component={Link}
                   href="#"
                   variant="button"
                   p={1}
                   onClick={(e) => e.preventDefault()}
                 >
-                  <MKBox component="i" color="white" className="fab fa-instagram" />
-                </MKTypography>
-              </MKBox>
-            </MKBox>
+                  <MDBox component="i" color="white" className="fab fa-instagram" />
+                </MDTypography>
+              </MDBox>
+            </MDBox>
           </Grid>
         </Container>
-      </MKBox>
-      <MKBox
+      </MDBox>
+      <MDBox
         display="flex"
         alignItems="center"
-        minHeight="100%"
-        sx={{
-          backgroundImage: ({ palette: { gradients }, functions: { linearGradient, rgba } }) =>
-            `${linearGradient(
-              rgba(gradients.dark.main, 0.5),
-              rgba(gradients.dark.state, 0.5)
-            )}, url(${bgImage})`,
+        minHeight="100vh"
+        sx={({ palette: { gradients }, functions: { linearGradient, rgba } }) => ({
+          backgroundImage: `${linearGradient(
+            rgba(gradients.dark.main, 0.5),
+            rgba(gradients.dark.state, 0.5)
+          )}, url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}
+        })}
       >
         <Container>
           <Grid container item xs={12} md={7} lg={6} flexDirection="column" justifyContent="center">
-            <MKTypography
+            <MDTypography
               variant="h1"
               color="white"
               mb={3}
@@ -155,22 +171,22 @@ function HeaderOne() {
               })}
             >
               Material Kit
-            </MKTypography>
-            <MKTypography variant="body1" color="white" opacity={0.8} pr={6} mr={6}>
+            </MDTypography>
+            <MDTypography variant="body1" color="white" opacity={0.8} pr={6} mr={6}>
               The time is now for it be okay to be great. People in this world shun people for being
               nice.
-            </MKTypography>
+            </MDTypography>
             <Stack direction="row" spacing={1} mt={3}>
-              <MKButton color="white">Get Started</MKButton>
-              <MKButton variant="text" color="white">
+              <MDButton color="white">Get Started</MDButton>
+              <MDButton variant="text" color="white">
                 Read more
-              </MKButton>
+              </MDButton>
             </Stack>
           </Grid>
         </Container>
-      </MKBox>
-    </MKBox>
+      </MDBox>
+    </MDBox>
   );
 }
 
-export default HeaderOne;
+export default HeaderCode;

@@ -1,14 +1,12 @@
-import PageHeaders from "layouts/sections/page-sections/page-headers";
+import PageHeaders from "layouts/homepage/page-headers";
+
+import BaseLayout from "layouts/homepage/BaseLayout";
 
 const HomePage = () => {
   return (
-    <>
+    <BaseLayout>
       <PageHeaders />
-      <div>
-        <h1>Welcome to the Home Page</h1>
-        <p>This is the home page of the matrimony website.</p>
-      </div>
-    </>
+    </BaseLayout>
   );
 };
 

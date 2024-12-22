@@ -1,41 +1,16 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-import { useMemo, useEffect, useState } from "react";
-
-// prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
-
-// react-table components
-import { useTable, usePagination, useGlobalFilter, useAsyncDebounce, useSortBy } from "react-table";
-
-// @mui material components
+import { useMemo, useEffect, useState } from "react"; // prop-types is a library for typechecking of props
+import PropTypes from "prop-types"; // react-table components
+import { useTable, usePagination, useGlobalFilter, useAsyncDebounce, useSortBy } from "react-table"; // @mui material components
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import Icon from "@mui/material/Icon";
-import Autocomplete from "@mui/material/Autocomplete";
-
-// Material Dashboard 2 React components
+import Autocomplete from "@mui/material/Autocomplete"; //  React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDInput from "components/MDInput";
-import MDPagination from "components/MDPagination";
-
-// Material Dashboard 2 React example components
+import MDPagination from "components/MDPagination"; //  React example components
 import DataTableHeadCell from "examples/Tables/DataTable/DataTableHeadCell";
 import DataTableBodyCell from "examples/Tables/DataTable/DataTableBodyCell";
 
@@ -267,9 +242,7 @@ function DataTable({
       </MDBox>
     </TableContainer>
   );
-}
-
-// Setting default values for the props of DataTable
+} // Setting default values for the props of DataTable
 DataTable.defaultProps = {
   entriesPerPage: { defaultValue: 10, entries: [5, 10, 15, 20, 25] },
   canSearch: false,
@@ -277,9 +250,7 @@ DataTable.defaultProps = {
   pagination: { variant: "gradient", color: "info" },
   isSorted: true,
   noEndBorder: false,
-};
-
-// Typechecking props for the DataTable
+}; // Typechecking props for the DataTable
 DataTable.propTypes = {
   entriesPerPage: PropTypes.oneOfType([
     PropTypes.shape({

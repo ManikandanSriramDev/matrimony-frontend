@@ -1,6 +1,4 @@
-/* eslint-disable no-param-reassign */
-
-// Material Kit
+/* eslint-disable no-param-reassign */ // Material Kit
 import MKBox from "components/MDBox";
 
 // Material Kit 2 React examples
@@ -16,8 +14,8 @@ function NavbarDark() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "",
+          label: "matrimony app",
           color: "info",
         }}
         transparent

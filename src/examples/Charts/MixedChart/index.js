@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2  React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import { useRef, useEffect, useState, useMemo } from "react";
 
 // porp-types is a library for typechecking of props
@@ -38,17 +23,17 @@ import {
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 React components
+//  React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Dashboard 2 React helper functions
+//  React helper functions
 import gradientChartLine from "assets/theme/functions/gradientChartLine";
 
 // MixedChart configurations
 import configs from "examples/Charts/MixedChart/configs";
 
-// Material Dashboard 2 React base styles
+//  React base styles
 import colors from "assets/theme/base/colors";
 
 ChartJS.register(
@@ -201,9 +186,7 @@ function MixedChart({ icon, title, description, height, chart }) {
   );
 
   return title || description ? <Card>{renderChart}</Card> : renderChart;
-}
-
-// Setting default values for the props of MixedChart
+} // Setting default values for the props of MixedChart
 MixedChart.defaultProps = {
   icon: { color: "info", component: "" },
   title: "",

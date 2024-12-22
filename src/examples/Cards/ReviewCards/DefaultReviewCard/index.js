@@ -146,9 +146,7 @@ function DefaultReviewCard({ color, image, name, date, review, rating }) {
       </MKTypography>
     </MKBox>
   );
-}
-
-// Setting default values for the props of DefaultReviewCard
+} // Setting default values for the props of DefaultReviewCard
 DefaultReviewCard.defaultProps = {
   color: "transparent",
   image: "",

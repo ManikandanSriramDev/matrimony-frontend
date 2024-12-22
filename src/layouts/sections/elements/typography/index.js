@@ -1,5 +1,5 @@
 // Sections components
-import BaseLayout from "layouts/sections/components/BaseLayout";
+import BaseLayout from "layouts/homepage/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Typography page components

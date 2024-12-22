@@ -3,7 +3,7 @@ import { createContext, useContext, useReducer, useMemo } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Material Dashboard 2 React main context
+//  React main context
 const MaterialUI = createContext();
 
 // Setting custom name for the context which is visible on react dev tools
@@ -46,9 +46,7 @@ function reducer(state, action) {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
   }
-}
-
-// Material Dashboard 2 React context provider
+} //  React context provider
 function MaterialUIControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
@@ -68,9 +66,7 @@ function MaterialUIControllerProvider({ children }) {
   const value = useMemo(() => [controller, dispatch], [controller, dispatch]);
 
   return <MaterialUI.Provider value={value}>{children}</MaterialUI.Provider>;
-}
-
-// Material Dashboard 2 React custom hook for using context
+} //  React custom hook for using context
 function useMaterialUIController() {
   const context = useContext(MaterialUI);
 
@@ -81,9 +77,7 @@ function useMaterialUIController() {
   }
 
   return context;
-}
-
-// Typechecking props for the MaterialUIControllerProvider
+} // Typechecking props for the MaterialUIControllerProvider
 MaterialUIControllerProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };

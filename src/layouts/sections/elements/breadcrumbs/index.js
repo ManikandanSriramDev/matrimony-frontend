@@ -9,7 +9,7 @@ import MKBox from "components/MDBox";
 import Breadcrumbs from "examples/Breadcrumbs";
 
 // Sections components
-import BaseLayout from "layouts/sections/components/BaseLayout";
+import BaseLayout from "layouts/homepage/BaseLayout";
 import View from "layouts/sections/components/View";
 
 // Breadcrumbs page components code
